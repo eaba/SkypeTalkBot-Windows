@@ -1,0 +1,42 @@
+﻿<Window x:Class="UpdaterNamespace.UpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ZCode Updater" Height="320" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="Resources/SkypeTalkBot.ico">
+    <Grid Background="#FFFAFFFD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition/>
+            <RowDefinition Height="86"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FF3C91E6" Height="56" VerticalAlignment="Top">
+            <Rectangle.Effect>
+                <DropShadowEffect Direction="-90" BlurRadius="25" Opacity="0.25"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <TextBlock Margin="0,10,0,0" TextWrapping="Wrap" Text="Update is availible!" VerticalAlignment="Top" Height="36" Foreground="#FFFAFFFD" FontSize="24" FontFamily="Segoe UI Semibold" TextAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="-90" ShadowDepth="1" Opacity="0.25"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <ProgressBar x:Name="ProgressBar" Height="15" Margin="20,0,20,45" VerticalAlignment="Bottom" Foreground="#FF3C91E6" Grid.Row="2"/>
+        <TextBlock x:Name="ProgressLabel" HorizontalAlignment="Left" Margin="20,0,0,65" TextWrapping="Wrap" Text="0%" VerticalAlignment="Bottom" Visibility="Hidden" Grid.Row="2"/>
+        <Button x:Name="UpdateButton" Content="Download &amp; Install" Margin="160,0,160,10" VerticalAlignment="Bottom" Background="#FF3C91E6" Foreground="#FFFAFFFD" Height="25" FontFamily="Segoe UI Semibold" IsDefault="True" Cursor="Hand" Click="UpdateButton_Click" Grid.Row="2"/>
+        <GroupBox Header="Changelog" Margin="20,20,20,0" BorderThickness="0,2" Grid.Row="1">
+            <RichTextBox Margin="0,5,-2,-3" BorderThickness="0" Background="{x:Null}" SelectionBrush="{x:Null}" IsReadOnly="True" Cursor="Arrow" VerticalScrollBarVisibility="Auto">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run x:Name="ChangelogBox"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </GroupBox>
+        <TextBlock x:Name="VersionChangeLabel" Grid.Row="1" TextWrapping="Wrap" Text="{}{0} -&gt; {1}" VerticalAlignment="Top" TextAlignment="Center" Height="20" FontSize="16">
+            <TextBlock.Effect>
+                <DropShadowEffect Direction="-90" ShadowDepth="2" Opacity="0.25"/>
+            </TextBlock.Effect>
+        </TextBlock>
+    </Grid>
+</Window>
