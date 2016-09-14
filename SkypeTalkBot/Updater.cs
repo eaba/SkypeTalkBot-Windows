@@ -12,11 +12,11 @@ public static class Updater
 {
     /*
      * Przykładowy wygląd pliku data:
-     * beta=Application_1.2.0.1
-     * release=Application_1.2.0.0
+     * beta=1.2.0.1
+     * release=1.2.0.0
      * minimum=1.2.0.0
      * 
-     * Prykładowy wyhląd pliku beta_testers
+     * Prykładowy wyhląd pliku betatesters
      * zaczero=12345678
      * kasjan=ABCDEFGH
      */
