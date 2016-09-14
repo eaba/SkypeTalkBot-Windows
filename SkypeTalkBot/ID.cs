@@ -16,7 +16,7 @@ class ID
         return hash;
     }
 
-    #region Source: http://www.codeproject.com/Articles/28678/Generating-Unique-Key-Finger-Print-for-a-Computer
+    #region Źródło: http://www.codeproject.com/Articles/28678/Generating-Unique-Key-Finger-Print-for-a-Computer
     private static string GetCpuId()
     {
         //Uses first CPU identifier available in order of preference
