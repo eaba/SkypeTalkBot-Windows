@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="ZCode Updater" Height="320" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="Resources/SkypeTalkBot.ico">
+        Title="ZCode Updater" Height="320" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="Resources/SkypeTalkBot.ico" ShowInTaskbar="False" Topmost="True">
     <Grid Background="#FFFAFFFD">
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>

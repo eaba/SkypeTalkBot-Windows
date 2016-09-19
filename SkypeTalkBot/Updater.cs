@@ -16,7 +16,7 @@ public static class Updater
      * release=1.2.0.0
      * minimum=1.2.0.0
      * 
-     * Prykładowy wyhląd pliku betatesters
+     * Prykładowy wygląd pliku betatesters
      * zaczero=12345678
      * kasjan=ABCDEFGH
      */
@@ -54,9 +54,12 @@ public static class Updater
             // Czy dostępna jest aktualizcaja?
             if (isUpdateAvailible)
             {
-                UpdateWindow window = new UpdateWindow(appName, isForceUpdateAvailible, GetActiveVersion(),
+                Application.Current.Dispatcher.Invoke(delegate
+                {
+                    UpdateWindow window = new UpdateWindow(appName, isForceUpdateAvailible, GetActiveVersion(),
                     GetUpdateVersion(fileArray, appName));
-                window.ShowDialog();
+                    window.ShowDialog();
+                });
             }
         }
         catch
